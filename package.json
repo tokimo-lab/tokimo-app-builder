@@ -1,0 +1,31 @@
+{
+  "name": "@tokimo/app-builder",
+  "version": "0.1.0",
+  "description": "Shared Vite preset and shell-deps constants for Tokimo third-party apps.",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "exports": {
+    "./shared": {
+      "types": "./src/shared.d.ts",
+      "default": "./src/shared.js"
+    },
+    "./vite": {
+      "types": "./src/vite.d.ts",
+      "default": "./src/vite.js"
+    }
+  },
+  "peerDependencies": {
+    "vite": "^6.0.0 || ^7.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@vitejs/plugin-react": "^4.3.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}
