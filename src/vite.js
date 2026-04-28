@@ -38,7 +38,6 @@ export function defineTokimoApp(options = {}) {
       emptyOutDir: true,
       cssCodeSplit: false,
       sourcemap: false,
-      minify: "esbuild",
       target: "es2022",
       lib: {
         entry,
@@ -49,7 +48,7 @@ export function defineTokimoApp(options = {}) {
       rollupOptions: {
         external: (id) => externals.has(id),
         output: {
-          inlineDynamicImports: true,
+          codeSplitting: false,
         },
       },
     },
