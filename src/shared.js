@@ -17,6 +17,7 @@ export const SHELL_DEP_PACKAGES = Object.freeze([
   "react-dom/client",
   "@tokimo/ui",
   "@tokimo/sdk",
+  "@tanstack/react-query",
 ]);
 
 /**
