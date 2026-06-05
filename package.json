@@ -4,6 +4,10 @@
   "description": "Shared Vite preset and shell-deps constants for Tokimo third-party apps.",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "typecheck": "echo 'pre-built package, skipping typecheck'",
+    "build": "echo 'pre-built package, skipping build'"
+  },
   "files": [
     "src"
   ],
