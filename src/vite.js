@@ -54,5 +54,11 @@ export function defineTokimoApp(options = {}) {
     },
   };
 
-  return defineConfig({ ...base, ...options.overrides });
+  const { plugins: extraPlugins, ...restOverrides } = options.overrides ?? {};
+  const merged = { ...base, ...restOverrides };
+  if (extraPlugins?.length) {
+    merged.plugins = [...base.plugins, ...extraPlugins];
+  }
+
+  return defineConfig(merged);
 }
