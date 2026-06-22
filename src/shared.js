@@ -18,8 +18,6 @@ export const SHELL_DEP_PACKAGES = Object.freeze([
   "@tokimo/ui",
   "@tokimo/sdk",
   "@tanstack/react-query",
-  "use-sync-external-store",
-  "use-sync-external-store/shim",
 ]);
 
 /**

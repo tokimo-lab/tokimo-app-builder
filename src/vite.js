@@ -2,6 +2,7 @@ import { resolve } from "node:path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { cjsInteropPlugin } from "./cjs-interop.js";
 import { SHELL_DEP_PACKAGES } from "./shared.js";
 
 /**
@@ -28,7 +29,7 @@ export function defineTokimoApp(options = {}) {
 
   /** @type {import("vite").UserConfig} */
   const base = {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), cjsInteropPlugin()],
     define: {
       "process.env.NODE_ENV": JSON.stringify("production"),
       "process.env": JSON.stringify({}),
