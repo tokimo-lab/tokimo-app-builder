@@ -46,7 +46,7 @@ export function defineTokimoApp(options = {}) {
         cssFileName: "index",
       },
       rolldownOptions: {
-        external: (id) => externals.has(id),
+        external: (id) => externals.has(id) || [...externals].some((ext) => id.startsWith(ext + "/")),
         output: {
           codeSplitting: false,
         },
