@@ -45,7 +45,7 @@ export function defineTokimoApp(options = {}) {
         fileName: () => "index.js",
         cssFileName: "index",
       },
-      rollupOptions: {
+      rolldownOptions: {
         external: (id) => externals.has(id),
         output: {
           codeSplitting: false,
