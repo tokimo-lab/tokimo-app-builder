@@ -5,6 +5,8 @@ export declare const SHELL_DEP_PACKAGES: readonly [
   "react-dom/client",
   "@tokimo/ui",
   "@tokimo/sdk",
+  "@tokimo/sdk/react",
+  "@tanstack/react-query",
 ];
 
 export type ShellDepPackage = (typeof SHELL_DEP_PACKAGES)[number];
